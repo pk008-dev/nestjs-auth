@@ -11,9 +11,9 @@ export class UsersService {
     });
   }
 
-  async findRefreshToken(token: string) {
+  async findByResetToken(token: string) {
     return db.query.users.findFirst({
-      where: eq(users.refreshToken, token),
+      where: eq(users.resetToken, token),
     });
   }
 

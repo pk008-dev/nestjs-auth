@@ -18,15 +18,15 @@ export const users = pgTable('users', {
   isverified: boolean('is_verified').notNull().default(false),
   AccessToken: text('Access_token'),
   AccessTokenExpiresAt: timestamp('Acesstoken_expires_at'),
-  refreshToken: text('refresh_token'),
-  refreshTokenExpiresAt: timestamp('refresh_token_expires_at'),
+  resetToken: text('reset_token'),
+  resetTokenExpiresAt: timestamp('reset_token_expires_at'),
   refreshTokenHash: text('refresh_token_hash'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
 export type User = typeof users.$inferSelect;
-export type NewUser = typeof users.$inferSelect;
+export type NewUser = typeof users.$inferInsert;
 
 export const taskstatusEnum = pgEnum('task_status', [
   'todo',

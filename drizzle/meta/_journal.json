@@ -15,6 +15,13 @@
       "when": 1779358380504,
       "tag": "0001_add_task_table",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1779549645421,
+      "tag": "0002_user_table",
+      "breakpoints": true
     }
   ]
 }
